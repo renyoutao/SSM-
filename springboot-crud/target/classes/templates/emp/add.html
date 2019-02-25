@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../../../favicon.ico" th:href="@{/favicon.ico}">-->
+
+    <title>用户添加</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet"
+          th:href="@{/webjars/bootstrap/4.2.1/css/bootstrap.css}">
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" th:href="@{/asserts/css/dashboard.css}" rel="stylesheet">
+</head>
+
+<body>
+
+<div th:replace="commons/bar::topbar"></div>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div th:replace="commons/bar::sidebar(activeUrl='emps')"></div>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+
+            <form th:action="@{/emp}" method="post">
+                <div class="form-group">
+                    <label for="name">姓名</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="姓名">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">修改姓名</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="修改姓名">
+                </div>
+                <div class="form-group">
+                    <label for="genderSel">性别</label>
+                    <select class="form-control" id="genderSel" name="gender">
+                        <option value="1">男</option>
+                        <option value="0">女</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="birthDay">生日</label>
+                    <input type="text" class="form-control" id="birthDay" name="birthDay" placeholder="生日">
+                </div>
+                <button class="btn btn-primary" type="submit">提交</button>
+            </form>
+
+        </main>
+    </div>
+</div>
+
+<!-- Icons -->
+<script src="https://unpkg.com/feather-icons/dist/feather.min.js" th:src="@{/asserts/js/feather.min.js}" }></script>
+<script>
+    feather.replace()
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" th:src="@{/webjars/jquery/3.3.1/jquery.js}"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<!--<script>window.jQuery || document.write('<script src="@{/webjars/jquery/3.3.1/jquery.js}"><\/script>')</script>-->
+<script src="../../assets/js/vendor/popper.min.js" th:src="@{/asserts/js/popper.min.js}"></script>
+<script src="../../dist/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.2.1/js/bootstrap.js}"></script>
+</body>
+</html>

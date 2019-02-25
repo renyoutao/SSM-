@@ -1,0 +1,4 @@
+com\kyexpress\springboot\controller\HelloController.class
+com\kyexpress\springboot\compoment\MyLocalResolver.class
+com\kyexpress\springboot\config\MyMvcConfig.class
+com\kyexpress\springboot\SpringbootCrudApplication.class
